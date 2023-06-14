@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Save Earth project.">
+  <!-- deployed at 12.04.2020 15:41 UTC -->
+
+
+
+  <link rel="icon" type="image/png" href="ethm.png"/>
+
+  <title>Save Earth</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body id="app-container">
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyD9BAvEhAt-2isE9BZRE51-XJdtyVVAiqo",
+    authDomain: "save-earth-today.firebaseapp.com",
+    databaseURL: "https://save-earth-today.firebaseio.com",
+    projectId: "save-earth-today",
+    storageBucket: "save-earth-today.appspot.com",
+    messagingSenderId: "160397546169",
+    appId: "1:160397546169:web:4842deaa1fd12787eec168"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
